@@ -3,6 +3,7 @@ package graph;
 import java.util.*;
 
 /**
+ * Basic implementation of an undirected graph using a hash map as the underlying adjacency structure.
  * @author Cameron Pascal
  * @author Ari Shaposhnik
  */
@@ -19,8 +20,8 @@ public class UndirectedGraph<E> {
         // Load factor can be adjusted as necessary.
         adjacencyMap = new HashMap<E, LinkedList<E>>(vertices.size(), 0.75f);
 
-        for (E vertice : vertices) {
-            adjacencyMap.put(vertice, new LinkedList<E>());
+        for (E vertex : vertices) {
+            adjacencyMap.put(vertex, new LinkedList<E>());
         }
     }
 

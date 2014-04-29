@@ -7,16 +7,22 @@ import java.util.*;
 
 
 /**
+ * Models the friendships between people.
  * @author Cameron Pascal
  * @author Ari Shaposhnik
  */
 public class FriendshipModel {
 
-    // TODO: loadFriendships() - add neighbors.
-
     private UndirectedGraph<Person> friendshipGraph;
 
+    /**
+     * Instantiates a model of friendships from a specified friendship file.
+     * @param fileName The name of the text file to build the friendship model from.
+     * @throws IllegalArgumentException if there was a problem reading the friendship file.
+     */
     public FriendshipModel(String fileName) throws IllegalArgumentException {
+
+        // TODO: Construct edges between friends.
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(fileName));  // Load in friendship file.
@@ -98,5 +104,57 @@ public class FriendshipModel {
             System.out.println(fileName + "was not found.");
             System.exit(0);
         }
+    }
+
+    /**
+     * Gets the subgraph of all people who attend the same school.
+     * @param schoolName The name of the school.
+     * @return <code>null</code> if no subgraph exists; otherwise an undirected graph of all people who attend the
+     * specified school.
+     */
+    public UndirectedGraph<Person> getSubgraphOfSchool(String schoolName) {
+
+        // TODO: Implement subgraph logic.
+
+        return null;
+    }
+
+    /**
+     * Gets the shortest introduction chain between two people.
+     * @param personA The name of the first person.
+     * @param personB The name of the second person.
+     * @return <code>null</code> if no introduction chain exists between; otherwise an ordered list representing the
+     * shortest introduction chain.
+     */
+    public List<Person> getIntroChain(String personA, String personB) {
+
+        // TODO: Implement intro chain logic.
+
+        return null;
+    }
+
+    /**
+     * Gets all the connected islands (cliques) of a specified school.
+     * @param schoolName The name of the school of which to find cliques.
+     * @return <code>null</code> if no cliques exist; otherwise an unordered list of graphs representing each
+     * respective clique.
+     */
+    public List<UndirectedGraph<Person>> getListOfCliquesOfSchool(String schoolName) {
+
+        // TODO: Implement clique logic.
+
+        return null;
+    }
+
+    /**
+     * Gets all people who are the only connection between at least two other distinct persons.
+     * @return <code>null</code> if this friendship model has no connectors; otherwise an unordered list of persons who
+     * are connectors.
+     */
+    public List<Person> getListOfConnectors() {
+
+        // TODO: Implement connector logic.
+
+        return null;
     }
 }
