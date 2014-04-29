@@ -10,15 +10,26 @@ public class UndirectedGraph<E> {
 
     private HashMap<E, LinkedList<E>> adjacencyMap;
 
+    /**
+     * Instantiates a graph of vertices with no edges.
+     * @param vertices List of vertices to be contained in the graph.
+     */
     public UndirectedGraph(List<E> vertices) {
 
+        // Load factor can be adjusted as necessary.
         adjacencyMap = new HashMap<E, LinkedList<E>>(vertices.size(), 0.75f);
 
-        for (int i=0; i<vertices.size(); i++) {
-            adjacencyMap.put(vertices.get(i), new LinkedList<E>());
+        for (E vertice : vertices) {
+            adjacencyMap.put(vertice, new LinkedList<E>());
         }
     }
 
+    /**
+     * Adds and edge between specified vertices.
+     * @param vertexA First vertex.
+     * @param vertexB Second vertex.
+     * @throws IllegalArgumentException if at least one specified vertex is not contained in this graph.
+     */
     public void addEdge(E vertexA, E vertexB) throws IllegalArgumentException {
 
         if (!adjacencyMap.containsKey(vertexA) || !adjacencyMap.containsKey(vertexB)) {
@@ -35,10 +46,19 @@ public class UndirectedGraph<E> {
         adjacencyMap.put(vertexB, b);
     }
 
+    /**
+     * Checks if a given vertex is in this graph.
+     * @param vertex The vertex to be checked against this graph.
+     * @return <code>true</code> if vertex is contained in this graph, otherwise <code>false</code>.
+     */
     public boolean containsVertex(E vertex) {
         return adjacencyMap.containsKey(vertex);
     }
 
+    /**
+     * Constructs a string representation of the graph in the format of the input file.
+     * @return String representation of the graph.
+     */
     public String toString() {
 
         return null;
