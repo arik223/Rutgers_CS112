@@ -126,7 +126,7 @@ public class FriendshipModel {
      * @return <code>null</code> if no introduction chain exists between; otherwise an ordered list representing the
      * shortest introduction chain.
      */
-    public List<Person> getIntroChain(String personA, String personB) {
+    public ArrayList<Person> getIntroChain(String personA, String personB) {
 
         // TODO: Implement intro chain logic.
 
@@ -139,7 +139,7 @@ public class FriendshipModel {
      * @return <code>null</code> if no cliques exist; otherwise an unordered list of graphs representing each
      * respective clique.
      */
-    public List<UndirectedGraph<Person>> getListOfCliquesOfSchool(String schoolName) {
+    public ArrayList<UndirectedGraph<Person>> getListOfCliquesOfSchool(String schoolName) {
 
         // TODO: Implement clique logic.
 
@@ -151,7 +151,7 @@ public class FriendshipModel {
      * @return <code>null</code> if this friendship model has no connectors; otherwise an unordered list of persons who
      * are connectors.
      */
-    public List<Person> getListOfConnectors() {
+    public ArrayList<Person> getListOfConnectors() {
 
         // TODO: Implement connector logic.
 

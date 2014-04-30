@@ -7,8 +7,8 @@ package friendship;
  */
 public class Person {
 
-    final String NAME;
-    final String SCHOOL;
+    public final String NAME;
+    public final String SCHOOL;
 
 
     /**
